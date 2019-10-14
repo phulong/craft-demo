@@ -1,0 +1,33 @@
+{
+    "name": "/urlbyid",
+    "description": "urlbyid",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "long-demo"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NLstech",
+            "homepage": "nlstech.net"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "\\urlbyid\\": "src/"
+        }
+    }
+  
+}

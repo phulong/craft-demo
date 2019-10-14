@@ -1,0 +1,41 @@
+{% macro errorList(errors) %}
+    {% if errors %}
+        <ul class="errors">
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endmacro %}
+
+<form method="post" action="addNews" accept-charset="UTF-8">
+    {{ csrfInput() }}
+   
+   
+    <label for="title">Title</label>
+    <input id="title" type="text" name="title"
+        {%- if entry is defined %} value="{{ entry.title }}"{% endif -%}>
+
+    {% if entry is defined %}
+        {{ _self.errorList(entry.getErrors('title')) }}
+    {% endif %}
+
+    <label for="body">Content</label>
+    <textarea id="body" name="content">
+        {%- if entry is defined %}{{ entry.content }}{% endif -%}
+    </textarea>
+
+    {% if entry is defined %}
+        {{ _self.errorList(entry.getErrors('body')) }}
+    {% endif %}
+
+      <label for="author">Title</label>
+    <input id="author" type="text" name="author"
+        {%- if entry is defined %} value="{{ entry.author }}"{% endif -%}>
+
+    {% if entry is defined %}
+        {{ _self.errorList(entry.getErrors('author')) }}
+    {% endif %}
+
+    <input type="submit" value="Publish">
+</form>

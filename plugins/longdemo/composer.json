@@ -1,0 +1,43 @@
+{
+    "name": "/long-demo",
+    "description": "long-demo",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "long-demo"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NLstech",
+            "homepage": "nlstech.net"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "\\longdemo\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "long-demo",
+        "handle": "long-demo",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "components": {
+            "longPlugin": "\\longdemo\\services\\LongPlugin"
+        },
+        "class": "\\longdemo\\Longdemo"
+    }
+}
